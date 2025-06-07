@@ -67,3 +67,29 @@ a:hover {
   color: #3366cc;
   font-weight: bold;
 }
+.collapsible {
+  background-color: #3366cc;
+  color: white;
+  cursor: pointer;
+  padding: 14px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.collapsible.active, .collapsible:hover {
+  background-color: #264d99;
+}
+
+.content {
+  padding: 0 15px;
+  display: none;
+  background-color: #f1f1f1;
+  border-left: 3px solid #3366cc;
+  border-radius: 0 0 5px 5px;
+  margin-bottom: 10px;
+}
