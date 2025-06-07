@@ -29,6 +29,22 @@
       <p>XTwitter: <a href="https://x.com/PacinoPacinot"</p> target="_blank">My XTwitter</a></p>
     </section>
   </div>
+  <script>
+  const collapsibles = document.querySelectorAll(".collapsible");
+
+  collapsibles.forEach(button => {
+    button.addEventListener("click", () => {
+      button.classList.toggle("active");
+      const content = button.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    });
+  });
+</script>
+
 </body>
 </html>
 <section class="projects">
