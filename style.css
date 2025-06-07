@@ -41,3 +41,29 @@ a {
 a:hover {
   text-decoration: underline;
 }
+.projects {
+  margin-top: 40px;
+  text-align: left;
+}
+
+.project-card {
+  background-color: #f9f9f9;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-left: 4px solid #3366cc;
+  border-radius: 8px;
+}
+
+.project-card h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.project-card p {
+  margin-bottom: 10px;
+}
+
+.project-card a {
+  color: #3366cc;
+  font-weight: bold;
+}
