@@ -15,6 +15,54 @@ body {
   box-shadow: 0 0 10px rgba(0,0,0,0.4);
   text-align: center;
 }
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.left-column {
+  flex: 3;
+}
+
+.right-column {
+  flex: 1;
+  background-color: #18372d;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 60px;
+  position: sticky;
+  top: 60px;
+}
+
+.ebooks h2 {
+  color: #44ff88;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.ebook {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.download-btn {
+  background-color: #44ff88;
+  color: #0d1f1a;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 5px;
+}
+
+.download-btn:hover {
+  background-color: #66ffaa;
+}
 
 .profile-img {
   width: 140px;
