@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pascal Tuyishime – Sales, Marketing & Business Development Specialist</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pascal Tuyishime – Sales & Marketing Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,8 +11,12 @@
     <img src="profile.jpg" alt="My Photo" class="profile-img">
 
     <h1>Hello, I'm Pascal</h1>
-    <p>Welcome to my personal website!</p>
+    <p>Welcome to my personal portfolio!</p>
 
+    <!-- Live GMT Clock -->
+    <div id="clock" class="clock"></div>
+
+    <!-- About Me -->
     <section class="about">
       <h2>About Me</h2>
       <p>
@@ -22,48 +26,60 @@
       </p>
     </section>
 
+    <!-- Contact (no links) -->
     <section class="contact">
       <h2>Contact Me</h2>
       <p>Email: pacinot@gmail.com</p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/pascal-tuyishime-344592361/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BQsZSUNZgTBGB4U2CEav5ng%3D%3D" target="_blank">My LinkedIn</a></p>
-      <p>XTwitter: <a href="https://x.com/PacinoPacinot"</p> target="_blank">My XTwitter</a></p>
+      <p>Phone: [Add your number here]</p>
+    </section>
+
+    <!-- Projects (Collapsible) -->
+    <section class="projects">
+      <h2>Projects</h2>
+
+      <div class="project">
+        <button class="collapsible">Online Store Website</button>
+        <div class="content">
+          <p>A fully functional store built with HTML, Tailwind CSS, JavaScript, and Stripe for real payments.</p>
+        </div>
+      </div>
+
+      <div class="project">
+        <button class="collapsible">Sales CRM Tool</button>
+        <div class="content">
+          <p>A simple CRM web app for managing leads, tracking interactions, and closing deals.</p>
+        </div>
+      </div>
+
+      <div class="project">
+        <button class="collapsible">Business Blog</button>
+        <div class="content">
+          <p>A personal blog where I write about sales strategies, marketing psychology, and business growth ideas.</p>
+        </div>
+      </div>
     </section>
   </div>
+
+  <!-- JavaScript for collapsible sections + ticking clock -->
   <script>
-  const collapsibles = document.querySelectorAll(".collapsible");
-
-  collapsibles.forEach(button => {
-    button.addEventListener("click", () => {
-      button.classList.toggle("active");
-      const content = button.nextElementSibling;
-      if (content.style.display === "block") {
-        content.style.display = "none";
-      } else {
-        content.style.display = "block";
-      }
+    // Collapsibles
+    const collapsibles = document.querySelectorAll(".collapsible");
+    collapsibles.forEach(button => {
+      button.addEventListener("click", () => {
+        button.classList.toggle("active");
+        const content = button.nextElementSibling;
+        content.style.display = (content.style.display === "block") ? "none" : "block";
+      });
     });
-  });
-</script>
 
+    // GMT Clock
+    function updateClock() {
+      const now = new Date();
+      const gmt = now.toUTCString().slice(17, 25);
+      document.getElementById("clock").textContent = "GMT Time: " + gmt;
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+  </script>
 </body>
 </html>
-<section class="projects">
-  <h2>Projects</h2>
-  </div>
-
-  <div class="project">
-    <button class="collapsible">Personal Blog</button>
-    <div class="content">
-      <p>A clean and minimal blog built with HTML and Markdown, hosted on GitHub Pages.</p>
-      <a href="https://github.com/yourusername/personal-blog" target="_blank">View on GitHub</a>
-    </div>
-  </div>
-  <div class="project">
-    <button class="collapsible">Projects</button>
-    <div class="content">
-      <p>A clean and minimal blog built with HTML and Markdown, hosted on GitHub Pages.</p>
-      <a href="https://github.com/yourusername/personal-blog" target="_blank">View on GitHub</a>
-    </div>
-
-  <!-- Add more collapsible projects here -->
-</section>
